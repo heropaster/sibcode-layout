@@ -58,7 +58,7 @@ p {
   color: #fff;
 }
 .mission-content {
-  padding: 317px 0 0 300px;
+  padding-top: 317px;
 }
 .mission-content__title {
   font-size: 52px;
@@ -365,8 +365,8 @@ p {
 .digitize-top__line {
   background: rgba(229, 229, 229, 0.3098039216);
   height: 68.5px;
-  -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
-          clip-path: polygon(0 100%, 0 0, 100% 100%);
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 101%);
+          clip-path: polygon(0 100%, 0 0, 100% 101%);
 }
 
 .digitize-bottom__line {
@@ -397,8 +397,12 @@ p {
   border-radius: 10px;
   border: 1px solid #2ecc71;
   background: #fff;
-  width: 428px;
-  height: 314px;
+  max-width: 428px;
+  width: 100%;
+  min-width: 320px;
+  max-height: 314px;
+  height: 100%;
+  min-height: 228px;
 }
 .digitize-block .capabilities__item h3 {
   color: #000;
@@ -610,4 +614,58 @@ p {
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
+}
+
+@media (max-width: 1440px) {
+  .content {
+    padding-left: calc(50% - 572px);
+    padding-right: calc(50% - 572px);
+  }
+  .mission {
+    height: 755px;
+  }
+  .mission .mission-content {
+    padding-top: 215px;
+  }
+  .mission .mission-image__container {
+    width: 100%;
+    height: 100%;
+    background: url("../images/phone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .mission .mission-image__container .mission-image {
+    display: none;
+  }
+  .digitize-block .capabilities__item p {
+    padding: 0 55px;
+  }
+  .digitize-block .capabilities__item-1 p {
+    padding: 0 63px;
+  }
+  .blog-block .blog-title {
+    margin: 0;
+  }
+  .blog-block .news-container {
+    gap: 20px;
+  }
+  .blog-block .news-container .news-item img {
+    height: 231px;
+  }
+  .contact {
+    gap: 94px;
+  }
+  .contact-form .inputs input {
+    width: 562px;
+  }
+  .contact-form .inputs .text-area textarea {
+    width: 562px;
+  }
+}
+@media (max-width: 568px) {
+  .content {
+    padding-left: calc(50% - 178px);
+    padding-right: calc(50% - 178px);
+  }
 }/*# sourceMappingURL=style.css.map */

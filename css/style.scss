@@ -54,7 +54,7 @@ p {
   max-width: 100%;
   color: #fff;
   &-content {
-    padding: 317px 0 0 300px;
+    padding-top: 317px;
     &__title {
       font-size: 52px;
       font-weight: 700;
@@ -357,7 +357,7 @@ p {
 .digitize-top__line {
   background: $back;
   height: 68.5px;
-  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 101%);
 }
 .digitize-bottom__line {
   background: $back;
@@ -383,8 +383,12 @@ p {
       border-radius: 10px;
       border: 1px solid #2ecc71;
       background: #fff;
-      width: 428px;
-      height: 314px;
+      max-width: 428px;
+      width: 100%;
+      min-width: 320px;
+      max-height: 314px;
+      height: 100%;
+      min-height: 228px;
       h3 {
         color: #000;
         font-size: 25px;
@@ -598,3 +602,5 @@ p {
     font-weight: 400;
   }
 }
+@import "laptop";
+@import "mobile";
