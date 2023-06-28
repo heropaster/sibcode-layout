@@ -1,6 +1,12 @@
 @media (max-width: 568px) {
+  .mobile__hidden {
+    display: none !important;
+  }
   .content {
     padding-left: calc(50% - 178px);
     padding-right: calc(50% - 178px);
+  }
+  .header {
+    justify-content: center;
   }
 }
