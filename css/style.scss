@@ -23,7 +23,7 @@ p {
   padding-right: calc(50% - 660px);
 }
 .mobile {
-  display: none;
+  display: none !important;
 }
 .header {
   display: flex;
