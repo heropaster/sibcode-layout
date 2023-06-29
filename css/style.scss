@@ -2,6 +2,10 @@
 body::-webkit-scrollbar {
   display: none;
 }
+body,
+html {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +21,9 @@ p {
 .content {
   padding-left: calc(50% - 660px);
   padding-right: calc(50% - 660px);
+}
+.mobile {
+  display: none;
 }
 .header {
   display: flex;

@@ -2,11 +2,194 @@
   .mobile__hidden {
     display: none !important;
   }
+  .mobile {
+    display: unset;
+  }
   .content {
     padding-left: calc(50% - 178px);
     padding-right: calc(50% - 178px);
   }
   .header {
     justify-content: center;
+  }
+  .mission {
+    height: 715px;
+    display: block;
+    &-content.mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 7px 0 25px 0;
+      .mission-content__title {
+        width: 296px;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .mission-image__container {
+        height: 408px;
+        background: url("/images/mobilephone.png") no-repeat;
+        background-position: 32% 45%;
+      }
+      .mission-content__text {
+        width: 293px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 25px;
+        margin-bottom: 28px;
+      }
+    }
+  }
+  .answer {
+    padding-bottom: 40px;
+    .answer__heading {
+      margin-bottom: 25px;
+      h2 {
+        font-size: 35px;
+        line-height: 32px;
+      }
+      span {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+    .answer__items {
+      margin-bottom: 32px;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      .answer-item {
+        h3 {
+          font-size: 22px;
+        }
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .form-answer {
+      gap: 18px;
+      flex-direction: column;
+      .email-input,
+      .btn.access-btn {
+        width: 320px;
+      }
+    }
+  }
+  .quote-block {
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .products-block {
+    .products-title {
+      margin-bottom: 22px;
+    }
+    .products-content {
+      flex-direction: column;
+      gap: 8px;
+      .products-text {
+        gap: 30px;
+      }
+    }
+  }
+  .digitize-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .digitize-title {
+      width: 227px;
+      font-size: 35px;
+      line-height: 45.5px;
+    }
+    .capabilities {
+      grid-template-columns: 1fr;
+      &__item {
+        padding: 22px 0;
+        h3 {
+          font-size: 22px;
+          margin: 9px 0;
+        }
+        p {
+          padding: 0 45px;
+        }
+      }
+    }
+  }
+  .blog-block {
+    .blog-title {
+      font-size: 35px;
+    }
+    .news-container {
+      grid-template-columns: 1fr;
+      .news-item {
+        align-items: center;
+        img {
+          max-width: 320px;
+        }
+        h4 {
+          align-self: flex-start;
+        }
+      }
+    }
+    .btn.news-btn {
+      width: 320px;
+    }
+  }
+  .contact {
+    flex-direction: column;
+    &-content {
+      h2 {
+        font-size: 35px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    &-form {
+      .inputs {
+        input,
+        .text-area textarea {
+          width: 320px;
+        }
+        .text-area {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  .footer {
+    height: 537px;
+    &-content {
+      flex-direction: column;
+      gap: 30px;
+      align-items: normal;
+      margin-bottom: 22px;
+    }
+    .content-first.mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      align-items: center;
+      .logo a {
+        font-size: 50px;
+      }
+    }
+    .content-links.mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+      .socials {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .content {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
