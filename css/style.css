@@ -250,6 +250,9 @@ p {
 .answer .form-answer .email-input::-moz-placeholder {
   color: #969696;
 }
+.answer .form-answer .email-input:-ms-input-placeholder {
+  color: #969696;
+}
 .answer .form-answer .email-input::placeholder {
   color: #969696;
 }
@@ -684,7 +687,93 @@ p {
     padding-right: calc(50% - 178px);
   }
   .header {
+    position: relative;
     justify-content: center;
+  }
+  .header .navigation {
+    position: absolute;
+    display: flex;
+    top: 46px;
+    left: calc(98vw - 50px);
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  .header .navigation .nav__logo {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 50px;
+    height: 40px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: margin 0.3s;
+    cursor: pointer;
+  }
+  .header .navigation .nav__logo .logo-item {
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 30px;
+  }
+  .header .navigation .nav__logo .logo-item .logo-first-line,
+.header .navigation .nav__logo .logo-item .logo-second-line,
+.header .navigation .nav__logo .logo-item .logo-third-line {
+    display: block;
+    position: absolute;
+    background-color: #2ecc71;
+    width: 23px;
+    height: 3px;
+    transition: transform 0.2s, bottom 0.2s, top 0.2s, background-color 0.2s;
+    transition: transform 0.2s, bottom 0.2s, top 0.2s, background-color 0.2s, opacity 0.2s;
+  }
+  .header .navigation .nav__logo .logo-item .logo-first-line {
+    top: 0;
+  }
+  .header .navigation .nav__logo .logo-item .logo-second-line {
+    top: 5px;
+  }
+  .header .navigation .nav__logo .logo-item .logo-third-line {
+    top: 10px;
+  }
+  .header .navigation .nav__logo.active .logo-first-line {
+    top: 2.5px;
+    transform: rotate(-45deg);
+  }
+  .header .navigation .nav__logo.active .logo-second-line {
+    top: 2.5px;
+    transform: rotate(45deg);
+  }
+  .header .navigation .nav__logo.active .logo-third-line {
+    opacity: 0;
+  }
+  .header .navigation .bar {
+    padding: 26px;
+    width: 100vw;
+    height: 50vh;
+    background: #2ecc71;
+    box-shadow: 0 0 10px #000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    right: 0;
+    top: 10vh;
+    transition: transform 0.1s, filter 0.1s;
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  .header .navigation .bar .mobile .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navigation .bar.active {
+    transform: rotate3d(1, 0, 0, 0deg);
+    filter: blur(0px);
   }
   .mission {
     height: 715px;
@@ -745,7 +834,7 @@ p {
     flex-direction: column;
   }
   .answer .form-answer .email-input,
-  .answer .form-answer .btn.access-btn {
+.answer .form-answer .btn.access-btn {
     width: 320px;
   }
   .quote-block h3 {
@@ -812,7 +901,7 @@ p {
     font-size: 18px;
   }
   .contact-form .inputs input,
-  .contact-form .inputs .text-area textarea {
+.contact-form .inputs .text-area textarea {
     width: 320px;
   }
   .contact-form .inputs .text-area {

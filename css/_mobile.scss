@@ -10,7 +10,128 @@
     padding-right: calc(50% - 178px);
   }
   .header {
+    position: relative;
     justify-content: center;
+    .navigation {
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      top: 46px;
+      left: calc(98vw - 50px);
+      bottom: 0;
+      right: 0;
+      height: 50px;
+      width: 50px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      z-index: 100;
+      .nav__logo {
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        top: 0;
+        width: 50px;
+        height: 40px;
+        background-color: #fff;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transition: margin 0.3s;
+        -o-transition: margin 0.3s;
+        transition: margin 0.3s;
+        cursor: pointer;
+        .logo-item {
+          display: block;
+          position: relative;
+          width: 23px;
+          height: 30px;
+          .logo-first-line,
+          .logo-second-line,
+          .logo-third-line {
+            display: block;
+            position: absolute;
+            background-color: $color;
+            width: 23px;
+            height: 3px;
+            -webkit-transition: transform 0.2s, bottom 0.2s, top 0.2s,
+              background-color 0.2s;
+            -o-transition: transform 0.2s, bottom 0.2s, top 0.2s,
+              background-color 0.2s;
+            -webkit-transition: bottom 0.2s, top 0.2s, background-color 0.2s,
+              -webkit-transform 0.2s;
+            transition: bottom 0.2s, top 0.2s, background-color 0.2s,
+              -webkit-transform 0.2s;
+            transition: transform 0.2s, bottom 0.2s, top 0.2s,
+              background-color 0.2s;
+            transition: transform 0.2s, bottom 0.2s, top 0.2s,
+              background-color 0.2s, opacity 0.2s;
+          }
+          .logo-first-line {
+            top: 0;
+          }
+          .logo-second-line {
+            top: 5px;
+          }
+          .logo-third-line {
+            top: 10px;
+          }
+        }
+      }
+      .nav__logo.active {
+        .logo-first-line {
+          top: 2.5px;
+          transform: rotate(-45deg);
+        }
+        .logo-second-line {
+          top: 2.5px;
+          transform: rotate(45deg);
+        }
+        .logo-third-line {
+          opacity: 0;
+        }
+      }
+      .bar {
+        padding: 26px;
+        width: 100vw;
+        height: 50vh;
+        background: $color;
+        box-shadow: 0 0 10px #000;
+        position: fixed;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        right: 0;
+        top: 10vh;
+        -webkit-transition: transform 0.1s, filter 0.1s;
+        -o-transition: transform 0.1s, filter 0.1s;
+        -webkit-transition: -webkit-transform 0.1s, -webkit-filter 0.1s;
+        transition: -webkit-transform 0.1s, -webkit-filter 0.1s;
+        transition: transform 0.1s, filter 0.1s;
+        transition: transform 0.1s, filter 0.1s, -webkit-transform 0.1s,
+          -webkit-filter 0.1s;
+        -webkit-transform: rotate3d(1, 0, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 90deg);
+        .mobile .nav {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .bar.active {
+        transform: rotate3d(1, 0, 0, 0deg);
+        filter: blur(0px);
+      }
+    }
   }
   .mission {
     height: 715px;
