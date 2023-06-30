@@ -691,6 +691,7 @@ p {
     justify-content: center;
   }
   .header .navigation {
+    display: block !important;
     position: absolute;
     display: flex;
     top: 46px;
@@ -767,6 +768,9 @@ p {
     transition: transform 0.1s, filter 0.1s;
     transform: rotate3d(1, 0, 0, 90deg);
   }
+  .header .navigation .bar .mobile {
+    display: block !important;
+  }
   .header .navigation .bar .mobile .nav {
     display: flex;
     flex-direction: column;
@@ -780,7 +784,7 @@ p {
     display: block;
   }
   .mission-content.mobile {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     padding: 7px 0 25px 0;
@@ -917,7 +921,7 @@ p {
     margin-bottom: 22px;
   }
   .footer .content-first.mobile {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     gap: 25px;
@@ -927,7 +931,7 @@ p {
     font-size: 50px;
   }
   .footer .content-links.mobile {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: 23px;
   }

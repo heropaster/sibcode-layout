@@ -13,6 +13,7 @@
     position: relative;
     justify-content: center;
     .navigation {
+      display: block !important;
       position: absolute;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -122,9 +123,12 @@
           -webkit-filter 0.1s;
         -webkit-transform: rotate3d(1, 0, 0, 90deg);
         transform: rotate3d(1, 0, 0, 90deg);
-        .mobile .nav {
-          display: flex;
-          flex-direction: column;
+        .mobile {
+          display: block !important;
+          .nav {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
       .bar.active {
@@ -137,7 +141,7 @@
     height: 715px;
     display: block;
     &-content.mobile {
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       align-items: center;
       padding: 7px 0 25px 0;
@@ -288,7 +292,7 @@
       margin-bottom: 22px;
     }
     .content-first.mobile {
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       justify-content: center;
       gap: 25px;
@@ -298,7 +302,7 @@
       }
     }
     .content-links.mobile {
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       gap: 23px;
       .socials {
